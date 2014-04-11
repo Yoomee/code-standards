@@ -12,6 +12,7 @@ group :development do
 end
 
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 
 gem 'ym_core',  '~> 1.1.9' #, :path => "~/Rails/Gems/ym_core" 
 gem 'ym_users', '~> 1.1.2' #, :path => "~/Rails/Gems/ym_core" 
