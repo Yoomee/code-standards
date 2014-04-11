@@ -1,0 +1,1 @@
+# Yoomee Code Standards
