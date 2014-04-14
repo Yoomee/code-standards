@@ -1,7 +1,117 @@
 #ruby.cs-section
-	%h2.page-header Ruby
-	%ul
-		%li Copy things from Jon's Google doc
+  %h2.page-header Ruby
+
+.row
+  .col-md-6
+    %p
+      Creates an image placeholder, using placehold.it - the ‘25x25’ relates to the height and width of the placeholder image you would like.
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =image_placeholder('25x25#')
+
+.row
+  .col-md-6
+    %p
+      To insert an image that is located within the '/assets/' folder, wrap the file name and extention in an
+      %code =image_tag
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =image_tag(’image.jpg’)
+
+.row
+  .col-md-6
+    %p
+      Creates a link with plain text, optionally add a css class, an icon (from font-awesome, do not prefix this with ‘fa-’) and position the icon (default is before the text, setting this to true places it after).
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =link_to(‘link name on page’, ‘link destiation’, :class => ‘class-name’, :icon => ‘clock-o’, :icon_last => true)
+
+.row
+  .col-md-6
+    %p
+      This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =link_to(‘link destiation’, :class => ‘class-name’) do
+            %i.fa.fa-clock-o
+            %h2 link heading
+            %p link text
+            
+.row
+  .col-md-6
+    %p
+      Loops the code as many times as specified.
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          -3.times do
+            %h3 Title
+
+.row
+  .col-md-6
+    %p
+      Loops the code as many times as specified.
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          -@bands.each_slice(3) do |*plural of thing you want to slice, e.g bands*|
+            .row
+              -bands.each do |band|
+                .col-md-*
+
+.row
+  .col-md-6
+    %p
+      Hides the label on a formtastic input element
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =form.input :postcode, :label => false
+          
+.row
+  .col-md-6
+    %p
+      Add a class to a formtastic input
+
+.row
+  .col-md-6
+    %pre
+      %code
+        :preserve
+          ## Comment
+          =form.input :postcode, :input_html => {:class => ’some-class’}
 
 
 
