@@ -4,8 +4,11 @@
 		%title Yoomee Code Standards
 		=stylesheet_link_tag("application")
 		=javascript_include_tag("application")
+		=javascript_include_tag("highlight.pack")
 		=favicon_link_tag("favicon.ico")
 		%meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+		:javascript
+			hljs.initHighlightingOnLoad();
 		=csrf_meta_tags
 		=yield :head
 	-body_tag do
