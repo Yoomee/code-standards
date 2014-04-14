@@ -9,4 +9,5 @@
 		=csrf_meta_tags
 		=yield :head
 	-body_tag do
+		=render('layouts/header')
 		=yield_with_bootstrap(yield)

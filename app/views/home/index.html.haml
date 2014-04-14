@@ -1,1 +1,58 @@
-%h1 Hello
+.container
+.container
+	.row
+		.span12
+			%h1.center Yoomee code standards
+.cs-contents
+	.container
+		.row
+			.col-md-3
+				%h2 Design
+				%ul
+					%li=link_to "Code standards", "#code-standards"
+					%li=link_to "Base styles", "#base-styles"
+					%li=link_to "Responsive", "#responsive"					
+					%li=link_to "Browser support", "#browser-support"
+					%li=link_to "CSS helper classes", "#css-helper-classes"	
+			.col-md-3
+				%ul.mt-6
+					%li=link_to "Animations", "#animations"
+					%li=link_to "Javascript", "#javascript"
+					%li=link_to "Sass variables", "#variables"
+					%li=link_to "Useful sites", "#useful-sites"
+					%li=link_to "Assets", "#assets"
+					%li=link_to "Wish list", "#wish-list"
+			.col-md-3
+				%h2 Dev/back end
+				%ul
+					%li=link_to "Ruby stuff", "#ruby"
+					%li=link_to "if !dev.present?", "#no-dev"
+					%li=link_to "Setting up a new Mac", "#new-mac"		
+
+
+.container
+	.row
+		.span12
+			=render('home/design/code_standards')
+			=render('home/design/base_styles')
+			=render('home/design/responsive')
+			=render('home/design/browser_support')
+			=render('home/design/css_helper_classes')
+			=render('home/design/animations')
+			=render('home/design/javascript')
+			=render('home/design/variables')
+			=render('home/design/useful_sites')
+			=render('home/design/assets')
+			=render('home/design/wish_list')
+
+			=render('home/dev/ruby')
+			=render('home/dev/no_dev')
+			=render('home/dev/new_mac')
+
+
+	
+
+	
+	
+	
+

@@ -1,0 +1,24 @@
+a {
+	color: #E2566D;
+	&:hover {
+		color: #CD4D66;
+	}
+}
+.cs-logo {
+	max-width: 200px;
+	margin: 30px auto;
+	display: block;
+}
+.cs-contents {
+	padding: 40px 0;
+	background: #f5f5f5;
+	margin: 40px 0;
+	font-size: 19px;
+	font-weight: 200;
+	ul {
+		padding-left: 20px;
+	}
+}
+.cs-section {
+	padding: 40px 0;
+}
