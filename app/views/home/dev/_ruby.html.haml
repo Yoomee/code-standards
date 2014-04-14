@@ -1,6 +1,14 @@
 #ruby.cs-section
   %h2.page-header Ruby
 
+
+=code "<div>matt.present?</div>", 'markup'
+=code 'ruby' do
+  :plain
+    def foo(bobo)
+      puts bobo
+    end
+
 .row
   .col-md-6
     %p
@@ -8,11 +16,8 @@
 
 .row
   .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          =image_placeholder('25x25#')
+    =render_code do
+      \=image_placeholder('25x25#')
 
 .row
   .col-md-6
@@ -25,6 +30,9 @@
     %pre
       %code
         :preserve
+          ul {
+            background: red;
+          }
           ## Comment
           =image_tag(’image.jpg’)
 

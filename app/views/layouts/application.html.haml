@@ -1,16 +1,13 @@
 !!!5
 %html
-	%head
-		%title Yoomee Code Standards
-		=stylesheet_link_tag("application")
-		=javascript_include_tag("application")
-		=javascript_include_tag("highlight.pack")
-		=favicon_link_tag("favicon.ico")
-		%meta{content: "width=device-width, initial-scale=1", name: "viewport"}
-		:javascript
-			hljs.initHighlightingOnLoad();
-		=csrf_meta_tags
-		=yield :head
-	-body_tag do
-		=render('layouts/header')
-		=yield_with_bootstrap(yield)
+  %head
+    %title Yoomee Code Standards
+    =stylesheet_link_tag("application")
+    =javascript_include_tag("application")
+    =favicon_link_tag("favicon.ico")
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+    =csrf_meta_tags
+    =yield :head
+  -body_tag do
+    =render('layouts/header')
+    =yield_with_bootstrap(yield)
