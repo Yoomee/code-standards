@@ -4,8 +4,32 @@ Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Or
 
 */
 
+pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #D88;
+  background-color: whitesmoke;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
 .hljs {
-  display: block; padding: 0.5em;
+  display: block; 
+  padding: 15px;
   background: #444;
 }
 
@@ -92,6 +116,10 @@ Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Or
 .hljs-request,
 .hljs-status {
   font-weight: bold;
+}
+
+span.hljs-attribute {
+  color: #88aadd;
 }
 
 .coffeescript .javascript,
