@@ -1,12 +1,55 @@
 #code-standards.cs-section
-  %h2.page-header Code standards
-  %ul
-    %li Copy stuff from Google doc
-    %li Inception rule (3 levels), but you can break it.
-    %li sassmeister
-    %li code pen
-    %li Try not to use !importants
-    %li sass files naming convention
-  %pre
-    %code
-      link_to('link name on page', 'link destiation', :class => 'class-name', :icon => 'clock-o', :icon_last => true)
+	%h2.page-header Code standards
+	.row
+		%p Our code standards integrates all the elements we use at Yoomee to help us optimise our workflow.
+		Below are a list of useful tools and general information to help initiating a project
+	.row
+		%ul
+			%li.row Indent all code using 2 spaces, always set your text editor to translate to spaces, if it isnt already.
+			%li.row 
+				We use 
+				=link_to 'SASS.', 'http://sass-lang.com'
+				using the .SCSS syntax. You can convert css to sass using a
+				=link_to 'Css2Sass coverter.', 'http://css2sass.heroku.com/'
+			%li.row 
+				We use 
+				=link_to 'HAML.', 'http://haml.info' 
+				You can convert your HTML to HAML using 
+				=link_to 'HTML2HAML converter.', 'http://html2haml.heroku.com/' 
+			%li.row 
+				We use 
+				=link_to 'CoffeeScript.', 'http://coffeescript.org/'
+				You can convert JavaScript to CoffeScript using the 
+				=link_to 'JS2Coffee converter', 'http://js2coffee.org/'
+			%li.row
+				.col-md-8
+					%p Media queries are witten inline using SASS
+					%pre
+						%code
+							:preserve
+								@media(max-width:700px) {
+									h2.blog-funny-text { 
+										display: none; 
+									}
+								}
+			%li.row
+				We try to make classes general/ re-useable, for example, try to avoid calling a class 'red-link'.
+			%li We use an application.css.scss file, located in assets/ stylesheets which is used to import partials from a the sass folder.
+			%li We use the inception rule to help keep SASS manageable and easy for other developers to read.
+			The inception rule means only indenting SASS to a maximum 3 levels. This rule can be broken, but this process helps to keep things logical and concise, so we try to stick to the inception menthod whenever possible.
+			%li 
+				=link_to 'Sassmeister', 'http://sassmeister.com/'
+				is a useful playground for Sass, Compass and LibSass. You can add Sass and SassMeiser will output the CSS.
+			%li
+				=link_to	'CodePen', 'http://codepen.io/'
+				Codepen is a useful playground for code experiments. You can cose in HAML, Sass, and more front-end languages.
+				The platform also allows you to be more involved by allowing you to code in real time and show off your code to other users.
+			%li Avoid using !important in your Sass code, opt to higher the specifity if you need to override a class.
+			%li 
+				Sass files need to adopt a similar naming convention across projects to maintain consistency. All Sass partials need to be placed in the stylesheets/sass directory, and should be named following the base style sass files:
+				%ul
+					%li _type.css.scss
+					%li _nav.css.scss
+					%li _responsive.css.scss
+					%li _variables.css.scss
+
