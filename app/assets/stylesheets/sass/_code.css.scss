@@ -24,6 +24,16 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
+pre.pre-bash {
+  background: #333;
+  border-left: 10px solid #E2566D;
+}
+code[class*="language-bash"] {
+  background: #333;
+  color:#fff;
+}
+
+
 /* Code blocks */
 pre[class*="language-"] {
   position:relative;

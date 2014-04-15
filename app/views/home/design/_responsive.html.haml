@@ -3,57 +3,54 @@
   %p We use the following responsive breakpoints to make our sites responsive
 
   -# Responsive break points grid
-  
+
   %table.table.table-striped.t-responsive
     %thead
       %tr
-        %td
-          Variable name
-        %td
-          Width
-        %td
-          Break point
+        %td Variable name
+        %td Width
+        %td Break point
     %tbody
       %tr
-        %td xs
-        %td min-width 
-        %td 450px
+        %td.xs xs
+        %td.xs min-width 
+        %td.xs 450px
       %tr
-        %td xs-max
-        %td max-width
-        %td 768px
+        %td.xs-max xs-max
+        %td.xs-max max-width
+        %td.xs-max 768px
       %tr
-        %td sm
-        %td min-width 
-        %td 769px
+        %td.sm sm
+        %td.sm min-width 
+        %td.sm 769px
       %tr
-        %td sm-max
-        %td max-width
-        %td 992px;
+        %td.sm-max sm-max
+        %td.sm-max max-width
+        %td.sm-max 992px
       %tr
-        %td md
-        %td min-width 
-        %td 993px
+        %td.md md
+        %td.md min-width 
+        %td.md 993px
       %tr
-        %td md-max
-        %td max-width
-        %td 1999px;
+        %td.md-max md-max
+        %td.md-max max-width
+        %td.md-max 1999px
       %tr
-        %td lg
-        %td min-width 
-        %td 1200px
+        %td.lg lg
+        %td.lg min-width 
+        %td.lg 1200px
       %tr
-        %td xl
-        %td min-width 
-        %td 1400px
+        %td.xl xl
+        %td.xl min-width 
+        %td.xl 1400px
       %tr
-        %td xxl
-        %td min-width 
-        %td 1700px
+        %td.xxl xxl
+        %td.xxl min-width 
+        %td.xxl 1700px
   .row
-    .col-md-8
+    .col-md-12
       %p We write our media queries inline to ensure maximum code readability. The code block below illustrates how this can be done:
-      =code 'sass' do
+      =code 'css' do
         :plain
           .container {
             padding: 10px 60px 10px; 
@@ -61,4 +58,4 @@
             @include media-query (xs-max){
               padding:10px;
               background:#CD4D66;
-            }
+          }

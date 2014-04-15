@@ -2,11 +2,39 @@
   %h2.page-header Javascript
   %p 
     You can convert JavaScript to CoffeeScript using the
-    =link_to 'JS2Coffee converter',  'http://js2coffee.org/'
+    =link_to 'JS2Coffee converter.',  'http://js2coffee.org/'
     Below are some typical javascript patterns used across yoomee sites:
-  %ul
-    %li Add class/remove class
-    %li Sticky headers
-    %li Fitvids
-    %li Scroll to id?
-    %li Parallax/scrollarama
+    
+    %h3 Add and remove classes
+    =code do
+      :plain
+        $(".container").addClass "new-class"
+        $(".container").removeClass "new-class"
+
+    %h3 Sticky headers
+    =code do
+      :plain
+        /* Sticky headers */
+
+    %h3 Scroll to ID
+    =code do
+      :plain
+        /* Use relavent Id to scroll to */
+
+        jQuery(document).ready(function(e) {
+          e(".cs-contents a").click(function(t) {
+            t.preventDefault();
+            e("html,body").animate({
+              scrollTop: e(this.hash).offset().top
+            });
+          });
+      });
+
+    %p Other Javascript plugins and resources we use
+    %ul 
+      %li 
+        For fluid width videos
+        =link_to 'Fitvids', 'http://fitvidsjs.com/'
+      %li 
+        For super scrolling animations and parallax effects you can use: 
+        =link_to  'Scrollarama', 'http://johnpolacek.github.io/scrollorama/'

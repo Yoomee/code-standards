@@ -8,7 +8,7 @@ module CodeHelper
       language = args.second
     end
     language ||= 'ruby'
-    content_tag(:pre, content_tag(:code, raw, :class => "language-#{language.to_s.downcase}"))
+    content_tag(:pre, content_tag(:code, raw, :class => "language-#{language.to_s.downcase}"), :class => "pre-#{language}")
   end
   
   def render_code(*args, &block)

@@ -7,6 +7,12 @@ a {
 		color: #CD4D66;
 	}
 }
+.centralise{
+		float:none;
+		margin:0 auto;
+		display:block;
+}
+
 .cs-logo {
 	max-width: 200px;
 	margin: 30px auto 0 auto;
@@ -23,11 +29,6 @@ a {
 		list-style: none;
 	}
 }
-.centralise{
-		float:none;
-		margin:0 auto;
-		display:block;
-	}
 .cs-section {
 	padding: 40px 0;
 	li{
@@ -35,6 +36,114 @@ a {
 		margin:10px 0;
 	}
 }
+
+ul{
+	  list-style-image: url(/assets/bullet.gif);
+}
+
+/* Code standards */
+
+
 #code-standards.cs-section{
 	padding: 0;
+}
+
+
+/* Responsive */
+
+#responsive{
+	.t-responsive {
+		td{
+			background:#fff;
+			color:#70797F;
+		}			
+	  @include media-query (xs){
+	    td.xs{
+	    	background:#F2DADE;
+	    	color: #70797F;
+	    }
+  	}
+    @include media-query (xs-max){
+  		 td.xs-max{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (sm){
+  		td.sm{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (sm-max){
+  		td.sm{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (md){
+  		td.md{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (md-max){
+  		td.md-max{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (lg){
+  		td.lg{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (xl){
+  	 td.xl{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+  	@include media-query (xxl){
+  		td.xxl{
+	    	background:#F2DADE;
+	    	color: #70797F;
+  		}
+  	}
+	}
+}
+
+/* Browser Support */
+
+
+#browser-support{
+	img{
+		max-width:600px;
+		width: 100%;
+	}
+}
+
+
+
+
+/* footer  */
+
+
+#scrollUp {
+
+  bottom: 20px;
+  right: 30px;
+  transition: bottom 150ms linear 0s;
+}
+
+
+
+/* new mac  */
+
+#new-mac{
+	ul{
+		padding: 0;
+		list-style: none;
+	}
 }

@@ -20,19 +20,6 @@
 			You can convert JavaScript to CoffeScript using the 
 			=link_to 'JS2Coffee converter', 'http://js2coffee.org/'
 		%li
-			.col-md-8
-
-				%pre.language-css
-					%code.language-css
-						:preserve
-							/* Media queries are witten inline using SASS */
-							
-							@media(max-width:700px) {
-								h2 { 
-									display: none; 
-								}
-							}
-		%li
 			We try to make classes general/ re-useable, for example, try to avoid calling a class 'red-link'.
 		%li We use an application.css.scss file, located in assets/ stylesheets which is used to import partials from a the sass folder.
 		%li We use the inception rule to help keep SASS manageable and easy for other developers to read.
@@ -52,4 +39,17 @@
 				%li _nav.css.scss
 				%li _responsive.css.scss
 				%li _variables.css.scss
+	.row
+		.col-md-12
+			%pre.language-css
+				%code.language-css
+					:preserve
+						/* Media queries are witten inline using SASS */
+
+						@media(max-width:700px) {
+							h2 { 
+								display: none; 
+							}
+						}
+
 

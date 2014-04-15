@@ -9,3 +9,12 @@
 #= require ym_core
 #= require redactor
 #= require prism
+#= require smooth-scroll
+#= require jquery.scrollUp.min
+
+$(document).ready ->
+
+  #  Scroll to top link
+  $ ->
+    $.scrollUp()
+    $("#scrollUp").html "<img src='assets/scroll-top.jpg' alt='scroll to top'>"
