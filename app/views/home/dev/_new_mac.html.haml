@@ -5,7 +5,7 @@
     %li
       %h3 
         =link_to 'Sublime Text', 'http://www.sublimetext.com'
-      =code 'bash' do
+      =code 'no-code' do
         :plain
           ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
     %li
@@ -13,7 +13,7 @@
         =link_to 'Text Mate', 'http://macromates.com/'
     %li
       %h3 Oh my zsh
-      =code 'bash' do
+      =code 'no-code' do
         :plain
           curl -L http://install.ohmyz.sh | sh
 
@@ -27,37 +27,37 @@
   %p Once installed open XCode, go to Preferences > Downloads and install Command Line Tools.
   %p (Mavericks use  $ xcode-select --install)
   %h3 Install Homebrew
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
       brew doctor
   =link_to  'Homebrew website', 'http://brew.sh/'
   %h3 Install RVM
   %p The required brew packages *should* be installed automatically, but it wasn’t working for me. Run this first:
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       brew install autoconf automake libtool pkg-config libyaml readline libxml2 libxslt libksba openssl
 
       curl -L https://get.rvm.io | bash -s stable --ruby
   %p For Mavericks you need to do this:
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       rvm get head
       rvm autolibs enable
   %p Then install some rubies:
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       rvm install 1.8.7
       rvm install 1.9.2
       rvm install 1.9.3
   %h3 Install MySql
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       brew install mysql
 
       mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
   %h4 Add to launchctl
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       mkdir -p ~/Library/LaunchAgents
 
@@ -65,22 +65,22 @@
 
       launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
   %h3 Install ImageMagick
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       brew install imagemagick
   %h4 Tramlines 6
   %h3 RVM
   %p Install and use ruby 1.8.7:
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       rvm install 1.8.7
       rvm use 1.8.7
   %h5 Downgrade rubygems to 1.3.7
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       rvm rubygems 1.3.7
   %h5 Downgrade rubygems to 1.3.7 (Mavericks)
-  =code 'bash' do
+  =code 'no-code' do
     :plain
       rvm rubygems 1.3.7 --force
   %h3 Sphinx
