@@ -26,11 +26,14 @@
     \=link_to('Link text', 'link destiation', :class => 'class-name', :icon => 'clock-o', :icon_last => true)
   
   %p This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
+  =link_to('link destiation', :class => 'class-name') do
+    %h5 Link heading
+    %p Link text
   =code do
     :plain
       =link_to('link destiation', :class => 'class-name') do
-        %h2 link heading
-        %p link text
+        %h5 Link heading
+        %p Link text
   
   -# Loops Section
            
