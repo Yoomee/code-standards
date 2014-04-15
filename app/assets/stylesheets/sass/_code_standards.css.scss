@@ -1,3 +1,6 @@
+body{
+	color:#70797f;
+}
 a {
 	color: #E2566D;
 	&:hover {
@@ -6,7 +9,7 @@ a {
 }
 .cs-logo {
 	max-width: 200px;
-	margin: 30px auto;
+	margin: 30px auto 0 auto;
 	display: block;
 }
 .cs-contents {
@@ -16,9 +19,22 @@ a {
 	font-size: 19px;
 	font-weight: 200;
 	ul {
-		padding-left: 20px;
+		padding-left: 0px;
+		list-style: none;
 	}
 }
+.centralise{
+		float:none;
+		margin:0 auto;
+		display:block;
+	}
 .cs-section {
 	padding: 40px 0;
+	li{
+		clear:both;
+		margin:10px 0;
+	}
+}
+#code-standards.cs-section{
+	padding: 0;
 }

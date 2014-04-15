@@ -1,5 +1,64 @@
 #responsive.cs-section
   %h2.page-header Responsive
-  %ul
-    %li Break points
-    %li Inline media query breakpoints
+  %p We use the following responsive breakpoints to make our sites responsive
+
+  -# Responsive break points grid
+  
+  %table.table.table-striped.t-responsive
+    %thead
+      %tr
+        %td
+          Variable name
+        %td
+          Width
+        %td
+          Break point
+    %tbody
+      %tr
+        %td xs
+        %td min-width 
+        %td 450px
+      %tr
+        %td xs-max
+        %td max-width
+        %td 768px
+      %tr
+        %td sm
+        %td min-width 
+        %td 769px
+      %tr
+        %td sm-max
+        %td max-width
+        %td 992px;
+      %tr
+        %td md
+        %td min-width 
+        %td 993px
+      %tr
+        %td md-max
+        %td max-width
+        %td 1999px;
+      %tr
+        %td lg
+        %td min-width 
+        %td 1200px
+      %tr
+        %td xl
+        %td min-width 
+        %td 1400px
+      %tr
+        %td xxl
+        %td min-width 
+        %td 1700px
+  .row
+    .col-md-8
+      %p We write our media queries inline to ensure maximum code readability. The code block below illustrates how this can be done:
+      =code 'sass' do
+        :plain
+          .container {
+            padding: 10px 60px 10px; 
+            background:#E2566D;
+            @include media-query (xs-max){
+              padding:10px;
+              background:#CD4D66;
+            }
