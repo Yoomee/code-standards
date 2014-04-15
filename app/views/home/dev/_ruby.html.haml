@@ -1,125 +1,68 @@
 #ruby.cs-section
   %h2.page-header Ruby
 
+-# Images Section
 
-=code "<div>matt.present?</div>", 'markup'
-=code 'ruby' do
+%h3 Image placeholder
+%p
+  Creates an image placeholder, using placehold.it - the 
+  %code ‘25x25’ 
+  relates to the height and width of the placeholder image you would like.
+=render_code do
+  \=image_placeholder('100x100#')
+
+%h3 Image tag
+%p
+  To insert an image that is located within the '/assets/' folder, wrap the file name and extention in an
+  %code =image_tag
+=code do
+  \=image_tag(’image.jpg’)
+
+-# Links Section
+
+%h3 Links
+%p Creates a link with plain text, optionally add a css class, an icon (from font-awesome, do not prefix this with ‘fa-’) and position the icon (default is before the text, setting this to true places it after).
+=render_code do
+  \=link_to('Link text', 'link destiation', :class => 'class-name', :icon => 'clock-o', :icon_last => true)
+
+%p This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
+=code do
   :plain
-    def foo(bobo)
-      puts bobo
-    end
+    =link_to('link destiation', :class => 'class-name') do
+      %h2 link heading
+      %p link text
 
-.row
-  .col-md-6
-    %p
-      Creates an image placeholder, using placehold.it - the ‘25x25’ relates to the height and width of the placeholder image you would like.
+-# Loops Section
+         
+%h3 Loops
+%p Loops the code as many times as specified.
+=code do
+  :plain
+    -3.times do
+      %h3 Title
 
-.row
-  .col-md-6
-    =render_code do
-      \=image_placeholder('25x25#')
+-# Slices Section
 
-.row
-  .col-md-6
-    %p
-      To insert an image that is located within the '/assets/' folder, wrap the file name and extention in an
-      %code =image_tag
+%h3 Slices
+%p Loops the code as many times as specified.
+=code do
+  :plain
+    ## Must define an instance variable for this to work - e.g. @bands
+    -@bands.each_slice(3) do |bands|
+      .row
+        -bands.each do |band|
+          .col-md-*
 
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ul {
-            background: red;
-          }
-          ## Comment
-          =image_tag(’image.jpg’)
+-# Forms Section
 
-.row
-  .col-md-6
-    %p
-      Creates a link with plain text, optionally add a css class, an icon (from font-awesome, do not prefix this with ‘fa-’) and position the icon (default is before the text, setting this to true places it after).
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          =link_to(‘link name on page’, ‘link destiation’, :class => ‘class-name’, :icon => ‘clock-o’, :icon_last => true)
-
-.row
-  .col-md-6
-    %p
-      This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          =link_to(‘link destiation’, :class => ‘class-name’) do
-            %i.fa.fa-clock-o
-            %h2 link heading
-            %p link text
-            
-.row
-  .col-md-6
-    %p
-      Loops the code as many times as specified.
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          -3.times do
-            %h3 Title
-
-.row
-  .col-md-6
-    %p
-      Loops the code as many times as specified.
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          -@bands.each_slice(3) do |*plural of thing you want to slice, e.g bands*|
-            .row
-              -bands.each do |band|
-                .col-md-*
-
-.row
-  .col-md-6
-    %p
-      Hides the label on a formtastic input element
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          =form.input :postcode, :label => false
+%h3 Forms & Formtastic
+%p Hides the label on a formtastic input element
+=code do
+  \=form.input :postcode, :label => false
           
-.row
-  .col-md-6
-    %p
-      Add a class to a formtastic input
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          ## Comment
-          =form.input :postcode, :input_html => {:class => ’some-class’}
+%p Add a class to a formtastic input
+=code do
+  \=form.input :postcode, :input_html => {:class => ’some-class’}
 
 
 
