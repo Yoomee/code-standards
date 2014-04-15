@@ -1,70 +1,65 @@
 #ruby.cs-section
   %h2.page-header Ruby
 
--# Images Section
-
-%h3 Image placeholder
-%p
-  Creates an image placeholder, using placehold.it - the 
-  %code ‘25x25’ 
-  relates to the height and width of the placeholder image you would like.
-=render_code do
-  \=image_placeholder('100x100#')
-
-%h3 Image tag
-%p
-  To insert an image that is located within the '/assets/' folder, wrap the file name and extention in an
-  %code =image_tag
-=code do
-  \=image_tag(’image.jpg’)
-
--# Links Section
-
-%h3 Links
-%p Creates a link with plain text, optionally add a css class, an icon (from font-awesome, do not prefix this with ‘fa-’) and position the icon (default is before the text, setting this to true places it after).
-=render_code do
-  \=link_to('Link text', 'link destiation', :class => 'class-name', :icon => 'clock-o', :icon_last => true)
-
-%p This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
-=code do
-  :plain
-    =link_to('link destiation', :class => 'class-name') do
-      %h2 link heading
-      %p link text
-
--# Loops Section
-         
-%h3 Loops
-%p Loops the code as many times as specified.
-=code do
-  :plain
-    -3.times do
-      %h3 Title
-
--# Slices Section
-
-%h3 Slices
-%p Loops the code as many times as specified.
-=code do
-  :plain
-    ## Must define an instance variable for this to work - e.g. @bands
-    -@bands.each_slice(3) do |bands|
-      .row
-        -bands.each do |band|
-          .col-md-*
-
--# Forms Section
-
-%h3 Forms & Formtastic
-%p Hides the label on a formtastic input element
-=code do
-  \=form.input :postcode, :label => false
-          
-%p Add a class to a formtastic input
-=code do
-  \=form.input :postcode, :input_html => {:class => ’some-class’}
-
-
-
-
-
+  -# Images Section
+  
+  %h3 Image placeholder
+  %p
+    Creates an image placeholder, using placehold.it - the 
+    %code ‘25x25’ 
+    relates to the height and width of the placeholder image you would like.
+  =render_code do
+    \=image_placeholder('100x100#')
+  
+  %h3 Image tag
+  %p
+    To insert an image that is located within the '/assets/' folder, wrap the file name and extention in an
+    %code =image_tag
+  =code do
+    \=image_tag(’image.jpg’)
+  
+  -# Links Section
+  
+  %h3 Links
+  %p Creates a link with plain text, optionally add a css class, an icon (from font-awesome, do not prefix this with ‘fa-’) and position the icon (default is before the text, setting this to true places it after).
+  =render_code do
+    \=link_to('Link text', 'link destiation', :class => 'class-name', :icon => 'clock-o', :icon_last => true)
+  
+  %p This is an alternative way to do a link which wraps everything indented within it in an anchor tag.
+  =code do
+    :plain
+      =link_to('link destiation', :class => 'class-name') do
+        %h2 link heading
+        %p link text
+  
+  -# Loops Section
+           
+  %h3 Loops
+  %p Loops the code as many times as specified.
+  =code do
+    :plain
+      -3.times do
+        %h3 Title
+  
+  -# Slices Section
+  
+  %h3 Slices
+  %p Loops the code as many times as specified.
+  =code do
+    :plain
+      ## Must define an instance variable for this to work - e.g. @bands
+      -@bands.each_slice(3) do |bands|
+        .row
+          -bands.each do |band|
+            .col-md-*
+  
+  -# Forms Section
+  
+  %h3 Forms & Formtastic
+  %p Hides the label on a formtastic input element
+  =code do
+    \=form.input :postcode, :label => false
+            
+  %p Add a class to a formtastic input
+  =code do
+    \=form.input :postcode, :input_html => {:class => ’some-class’}
