@@ -6,137 +6,67 @@
     %li Text formatting
     %li Positioning
 
-.row
-  .col-md-6
-    %p
-      Margins
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          /* Use numbers 0-10 */
-          
-          .m-0
-          .mt-0
-          .mb-0
-          .ml-0
-          .mr-0
-          .mv-0
-          .mh-0
-          
-          /* This applies these CSS rules */
-          
-          .m-0 {
-            margin: 0px;
-          }
-          .mt-0 {
-            margin-top: 0px;
-          }
-          .mb-0 {
-            margin-bottom: 0px;
-          }
-          .ml-0 {
-            margin-left: 0px;
-          }
-          .mr-0 {
-            margin-right: 0px;
-          }
-          .mv-0 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
-          .mh-0 {
-            margin-left: 0px;
-            margin-right: 0px;
-          }
-
-.row
-  .col-md-6
-    %p
-      All over padding
-
-.row
-  .col-md-6
-    =code 'css' do
-      :plain
-        /* Use numbers 0-10 */
-        
-        .p-0
-        .pt-0
-        .pb-0
-        .pl-0
-        .pr-0
-        .pv-0
-        .ph-0
-        
-        /* This applies these CSS rules */
-        
-        .p-0 {
-          padding: 0px;
-        }
-        .pt-0 {
-          padding-top: 0px;
-        }
-        .pb-0 {
-          padding-bottom: 0px;
-        }
-        .pl-0 {
-          padding-left: 0px;
-        }
-        .pr-0 {
-          padding-right: 0px;
-        }
-        .pv-0 {
-          padding-top: 0px;
-          padding-bottom: 0px;
-        }
-        .ph-0 {
-          padding-left: 0px;
-          padding-right: 0px;
-        }
-
-.row
-  .col-md-6
-    %p
-      Text formatting
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          .left
-          .right
-          .center
-          
-          /* This applies these CSS rules */
-          
-          .left {
-            text-align: left;
-          }
-          .right {
-            text-align: right;
-          }
-          .center {
-            text-align: center;
-          }
-
-.row
-  .col-md-6
-    %p
-      Positioning
-
-.row
-  .col-md-6
-    %pre
-      %code
-        :preserve
-          .relative
-          
-          /* This applies these CSS rules */
-          
-          .relative {
-            position: relative;
-          }
+  %h3 Margins
+  %p Margin helper classes allow you to specifiy a; top, right, left, bottom, vertical, horizontal and/or all round margin for an element.
+  =code 'css' do
+    :plain    
+      /* You can use numbers 0-10 for a range of margin sizes */
+      
+      .m-0 { margin: 0px; }
+      .mt-0 { margin-top: 0px; }
+      .mb-0 { margin-bottom: 0px; }
+      .ml-0 { margin-left: 0px; }
+      .mr-0 { margin-right: 0px; }
+      .mv-0 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .mh-0 {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+  
+  %h3 Padding
+  %p Padding helper classes allow you to specifiy a; top, right, left, bottom, vertical, horizontal and/or all round padding for an element.
+  =code 'css' do
+    :plain
+      /* You can use numbers 0-10 for a range of padding sizes */
+      
+      .p-0 { padding: 0px; }
+      .pt-0 { padding-top: 0px; }
+      .pb-0 { padding-bottom: 0px; }
+      .pl-0 { padding-left: 0px; }
+      .pr-0 { padding-right: 0px; }
+      .pv-0 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      .ph-0 {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+  
+  %h3 Text formatting
+  %p Text formatting
+  =code 'css' do
+    :plain
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+      .center {
+        text-align: center;
+      }
+  
+  %h3 Positioning
+  %p 
+    You can attach the
+    %code .relative
+    class to a parent element when you wish to absolutely position child elements inside it.
+  =code 'css' do
+    :plain    
+      .relative {
+        position: relative;
+      }
