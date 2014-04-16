@@ -11,10 +11,16 @@
 #= require prism
 #= require smooth-scroll
 #= require jquery.scrollUp.min
+#= require sticky-header
 
 $(document).ready ->
+  
+  $("body").scrollspy target: ".nav-main"
+
 
   #  Scroll to top link
   $ ->
     $.scrollUp()
-    $("#scrollUp").html "<img src='assets/scroll-top.jpg' alt='scroll to top'>"
+    $("#scrollUp").html "<img src='assets/scroll-top.png' alt='scroll to top'>"
+  
+

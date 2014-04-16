@@ -9,6 +9,6 @@
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
     =csrf_meta_tags
     =yield :head
-  -body_tag do
+  -body_tag :"data-spy" => "scroll", :"data-target" => ".nav-main" do
     =render('layouts/header')
     =yield_with_bootstrap(yield)
