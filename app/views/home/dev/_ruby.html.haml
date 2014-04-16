@@ -36,9 +36,8 @@
         %p Link text
 
   %p Creates a link to a given email address
-  =code do
-    :plain
-      :mail_to('text on page', 'email address')
+  =render_code do
+    \=mail_to('email@address.com', 'Email link on page')
   
   -# Loops Section
            
@@ -70,12 +69,9 @@
             
   %p Add a class to a formtastic input
   =code do
-    \=form.input :postcode, :input_html => {:class => ’some-class’}
+    \=form.input :postcode, :input_html => {:class => 'class-name'}
 
-  -# Miscellanious
-
-  %h3 Miscellaneous
   %p Adds a class onto a button
   =code do
     :plain
-      :button_html => {:class => "btn"} ---- add a class to a button
+      :button_html => {:class => 'class-name'}
