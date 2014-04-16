@@ -25,8 +25,10 @@ ul{
 	font-size: 15px;
 	font-weight: 200;
 	position: relative;
+	float: left;
 	.nav-main{
-		margin-top:70px;
+		position: absolute;
+		top: 70px;
 		@include media-query (xs-max){
 			display:none;
 		}
@@ -62,7 +64,6 @@ ul{
 }
 
 .main{
-	padding-left: 100px;
 	@include media-query (sm-max){
 		padding-left: 180px;
 	}
@@ -79,15 +80,22 @@ ul{
 	}
 }
 
-
-.affix{
+.affix.nav-main{
 	top:34px;
 	position: fixed;
 }
-.affix-top{
-	position: absolute;
-	top: 0px;
+
+
+/* footer  */
+
+
+#scrollUp {
+
+  bottom: 20px;
+  right: 30px;
+  transition: bottom 150ms linear 0s;
 }
+
 
 
 /* Responsive */
@@ -103,7 +111,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -112,7 +120,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -121,7 +129,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -130,7 +138,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -139,7 +147,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -148,7 +156,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -157,7 +165,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -166,7 +174,7 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
   	}
@@ -175,12 +183,15 @@ ul{
 	    	color: #70797F;
 	    	background: #F2DADE;
     		&:last-of-type{
-    			background:url("/assets/active.png") no-repeat scroll 160px center / 25px auto #F2DADE;
+    			background:url("/assets/active.png") no-repeat scroll 135px center / 25px auto #F2DADE;
     		}
 	    }
 		}
 	}
 }
+
+
+
 /* Browser Support */
 
 
@@ -193,15 +204,6 @@ ul{
 
 
 
-/* footer  */
-
-
-#scrollUp {
-
-  bottom: 20px;
-  right: 30px;
-  transition: bottom 150ms linear 0s;
-}
 
 /* Variables */
 
@@ -239,6 +241,9 @@ $ym-white:         #ffffff;
 		text-indent: 40px;
 	}
 }
+
+
+
 /* new mac  */
 
 #new-mac{
