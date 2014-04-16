@@ -3,16 +3,89 @@
   %ul
     %li What is Git?
     %li Bundler
-    %li rake db:migrate
-    %li ym db:fetch
     %li compiling assets
     %li Git branches
-    %li Git conflicts
     %li rake ts:rebuild
-    
-  %h3 Deploying
-  %p  
+
+  %h3 Git Conflicts
+  %p Git conflicts will appear like this in terminal:
+  =code 'no-code' do
+    :plain
+      CONFLICT (content): Merge conflict in views/index.html.haml
   
+  %p
+    Visit each file that has a
+    %code CONFLICT
+    and fix them, each file will contain something like this:
+  =code 'no-code' do
+    :plain
+      <<<<<<< HEAD
+        .container
+          .row
+            .col-md-12
+              %h2 Your version
+      =======
+        .container-fluid
+          .row-fluid
+            .span12
+              %h2 Version being pulled
+      >>>>>>>
+  %p
+    Everything between
+    %code <<<<<<< HEAD
+    and
+    %code =======
+    is the code you are attempting to push. Everything between
+    %code =======
+    and
+    %code >>>>>>>
+    is the code on the master branch. You must decide which code is the most recent working code and delete the other or merge the two together, you must also remember to delete the
+    %code <<<<<<< HEAD, =======
+    and
+    %code >>>>>>>
+    \.
+  %p Return to terminal after all conficts are fixed and type
+  =code 'no-code' do
+    :plain
+      git commit -a
+  
+  %p Remember if you have any commited code waiting to be pushed to push this now also.
+      
+
+  %h3 Databases
+  %p TODO - explaination of rake db:migrate
+  =code 'no-code' do
+    :plain
+      rake db:migrate
+      
+  %p
+    You can fetch a remote database by doing a ym db:fetch. You may be asked to specify an enviromment, for this you can do
+    %code -e staging
+    or
+    %code -e production
+    
+  =code 'no-code' do
+    :plain
+      ym db:fetch -e production
+
+  %h3 Deploying
+  %p To deploy a project to production or staging make sure you have pulled the latest changes and your branch is up to date.
+
+  %p Recompile assets:
+  =code 'no-code' do
+    :plain
+      rake assets:recompile
+
+  %p Push recompiled assets:
+  =code 'no-code' do
+    :plain
+      git push origin *branch-name*
+
+  %p Deploy, only use -m if there is migrations:
+  =code 'no-code' do
+    :plain
+      ey deploy -m
+
   %h3 Pushing to Git
   %p Try to push to git as often as you can in order to avoid conflicts with the rest of the team. Always stage and commit your changes in GitX, then pull before pushing in terminal.
   %p Try to write helpful and concise commit messages and always use the present tense, for example; "Add jQuery to application.coffee" instead of "Added jQuery to application.coffee"
