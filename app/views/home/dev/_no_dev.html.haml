@@ -2,7 +2,6 @@
   %h2.page-header if !dev.present?
   %ul
     %li What is Git?
-    %li Terminal unix commands cd, ls etc
     %li Bundler
     %li rake db:migrate
     %li ym db:fetch
@@ -10,10 +9,36 @@
     %li deploying
     %li Git branches
     %li Git conflicts
-    %li How to clone a project
-    %li how to edit gems
     %li rake ts:rebuild
     %li Git commits (present tense) | how often to push
+
+  %h3 UNIX Commands
+  =code 'no-code' do
+    :plain
+      ## Shows all the files & folders in the current directory
+      ls
+      
+      ## Shows all the files & folders in the current directory in a list and shows permissions for each
+      ls -l
+        
+  =code 'no-code' do
+    :plain
+      ## change directory
+      cd *directory-name*
+
+      ## Brings you up one directory level
+      cd ..
+      
+      ## Returns you to your home directory
+      cd
+      
+  =code 'no-code' do
+    :plain
+      ## Copy a file
+      cp *filename*
+
+      ## Move a file or change it's name
+      mv *filename* *new-filename*
 
   %h3 How to clone a project
   %p To clone a project, cd into your 'rails' folder and run this in terminal:
