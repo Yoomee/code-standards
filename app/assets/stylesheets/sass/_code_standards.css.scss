@@ -1,5 +1,6 @@
 body{
 	color:#70797f;
+	word-break: break-word;
 }
 a {
 	color: #E2566D;
@@ -7,12 +8,6 @@ a {
 		color: #CD4D66;
 	}
 }
-.centralise{
-		float:none;
-		margin:0 auto;
-		display:block;
-}
-
 .cs-logo {
 	max-width: 200px;
 	margin: 30px auto 0 auto;
