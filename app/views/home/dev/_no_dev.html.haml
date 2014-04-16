@@ -15,45 +15,73 @@
     %li rake ts:rebuild
     %li Git commits (present tense) | how often to push
 
-.row
-  %p
-    To clone a project, cd into your 'rails' folder and run:
-
-.row
-  =code 'bash' do
+  %h3 How to clone a project
+  %p To clone a project, cd into your 'rails' folder and run this in terminal:
+  =code 'no-code' do
     :plain
-      :preserve
-        ## Replace the correct link from gitlab
-        git clone git@gitlab.yoomee.com:yoomee/code-standards.git
-
-.row
-  %p
-    To override anything within a gem:
-
-.row
-  =code 'bash' do
+      git clone git@gitlab.yoomee.com:yoomee/code-standards.git
+  
+  %h3 How to override gems
+  %p To override anything within a gem:
+  =code 'no-code' do
     :plain
-      ## Replace the correct link from gitlab
       bundle open *gem_name*
+  
   %ul
     %li Find the file you wish to edit, and re-create this file in your local app/views (in the  same folder it is located in in the gem)
     %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
     %li You can edit and save changes in the file you just created. Your app will use this file rather than the file from the gem.
-%h3 How to clone a project
-%p To clone a project, cd into your 'rails' folder and run:
-=code 'bash' do
-  :plain
-    ## Replace the correct link from gitlab
-    git clone git@gitlab.yoomee.com:yoomee/code-standards.git
 
-%h3 How to edit gems
-%p To override anything within a gem:
-=code 'bash' do
-  :plain
-    ## Replace the correct link from gitlab
-    bundle open *gem_name*
+  %h3 How to update gems
+  %p To update a gem for all projects, cd into your gems folder and run:
+  =code 'no-code' do
+    :plain
+      git clone git@gitlab.yoomee.com:yoomee/ym_core.git
+  
+  %ul
+    %li Go to a project to test the gem changes in and open the 'gemfile' located in the root folder.
+    %li Find the gem you want to edit and uncomment the path (remove the hash after the version number), this tells the project to use the local version of the gem.
+  =code do
+    :plain
+      gem 'ym_core',  '~> 1.1.9' #, :path => "~/Rails/Gems/ym_core"
+      
+      ## Should now look like this
+      
+      gem 'ym_core',  '~> 1.1.9', :path => "~/Rails/Gems/ym_core"
+  %ul
+    %li Open the gem file you just cloned locally and make your changes.
 
-%ul
-  %li Find the file you wish to edit, and re-create this file in your local app/views (in the  same folder it is located in in the gem)
-  %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
-  %li You can edit and save changes in the file you just created. Your app will use this file rather than the file from the gem.
+  %h3 How to bump gems
+  %p When you have updated a gem, you will need to bump it so that all projects have access to it. Firsly you need to push your changes to git:
+  =code 'no-code' do
+    :plain
+      git push origin *branch name*
+
+  %ul
+    %li then run:
+
+  =code 'no-code' do
+    :plain
+      ym gem:bump
+      
+      ## Press enter when the old and new version numbers are shown
+      
+  %ul
+    %li Remember to revert the gemfile of the project you tested the gem in to reflect your changes:
+  
+  =code do
+    :plain
+      gem 'ym_core',  '~> 1.1.9', :path => "~/Rails/Gems/ym_core"
+      
+      ## Should now look like this, remember to update the gem version number
+      
+      gem 'ym_core',  '~> 1.1.10' #, :path => "~/Rails/Gems/ym_core"
+
+  %ul
+    %li 
+      You will need to 
+      %code bundle 
+      and restard the server on the project you were testing on
+    %li
+      If you are bumping a gem with no version number set, you need to run
+      %code bundle update *(gem name)*
