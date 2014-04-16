@@ -14,7 +14,19 @@
     %h3 Sticky headers
     =code do
       :plain
-        /* Sticky headers */
+        StickyHeader.init()
+        
+        window.StickyHeader =
+          init: ->
+            StickyHeader.scroll()
+            $(window).scroll ->
+              StickyHeader.scroll()
+          scroll: ->
+            # blog sticky nav
+            #if $("body").scrollTop() > $('.strip-hero').height()
+            #  $(".blog-fixed-bar").addClass("fixed")
+            #else
+            #   $(".blog-fixed-bar").removeClass("fixed")
 
     %h3 Scroll to ID
     =code do
