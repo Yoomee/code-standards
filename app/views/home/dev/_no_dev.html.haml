@@ -127,3 +127,18 @@
     %li
       If you are bumping a gem with no version number set, you need to run
       %code bundle update *(gem name)*
+  %h3 How to add a new route a file
+  %p 
+    When you need to add a new page to the solution, add your .html.haml file in the /views/home directory 
+    and add it to routes.rb which is located in the config folder of the project
+  =code do
+    :plain
+        CodeStandards::Application.routes.draw do
+
+          ym_users_routes
+
+          get "standards-style" => "home#style"
+          root :to => 'home#index'
+
+        end
+
