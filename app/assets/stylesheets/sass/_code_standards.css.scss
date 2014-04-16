@@ -22,8 +22,10 @@ ul{
 	font-size: 15px;
 	font-weight: 200;
 	position: relative;
+	float: left;
 	.nav-main{
-		margin-top:70px;
+		position: absolute;
+		top: 70px;
 		@include media-query (xs-max){
 			display:none;
 		}
@@ -59,7 +61,6 @@ ul{
 }
 
 .main{
-	padding-left: 100px;
 	@include media-query (sm-max){
 		padding-left: 180px;
 	}
@@ -76,15 +77,22 @@ ul{
 	}
 }
 
-
-.affix{
+.affix.nav-main{
 	top:34px;
 	position: fixed;
 }
-.affix-top{
-	position: absolute;
-	top: 0px;
+
+
+/* footer  */
+
+
+#scrollUp {
+
+  bottom: 20px;
+  right: 30px;
+  transition: bottom 150ms linear 0s;
 }
+
 
 
 /* Responsive */
@@ -178,6 +186,9 @@ ul{
 		}
 	}
 }
+
+
+
 /* Browser Support */
 
 
@@ -190,15 +201,6 @@ ul{
 
 
 
-/* footer  */
-
-
-#scrollUp {
-
-  bottom: 20px;
-  right: 30px;
-  transition: bottom 150ms linear 0s;
-}
 
 /* Variables */
 
@@ -236,6 +238,9 @@ $ym-white:         #ffffff;
 		text-indent: 40px;
 	}
 }
+
+
+
 /* new mac  */
 
 #new-mac{
