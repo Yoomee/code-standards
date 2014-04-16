@@ -3,16 +3,109 @@
   %ul
     %li What is Git?
     %li Bundler
-    %li rake db:migrate
-    %li ym db:fetch
-    %li compiling assets
-    %li Git branches
-    %li Git conflicts
-    %li rake ts:rebuild
     
-  %h3 Deploying
-  %p  
+  %h3 Thinking Sphinx
+  =code 'no-code' do
+    :plain
+      rake ts:start
+
+  =code 'no-code' do
+    :plain
+      rake ts:stop
+
+  =code 'no-code' do
+    :plain
+      rake ts:rebuild
+
+  %h3 Git branches
+  %p To create a new branch a switch to it
+  =code 'no-code' do
+    :plain
+      git checkout -b *branch_name*
   
+  %p To switch to an existing branch
+  =code 'no-code' do
+    :plain
+      git checkout *branch_name*
+
+  %h3 Git conflicts
+  %p Git conflicts will appear like this in terminal:
+  =code 'no-code' do
+    :plain
+      CONFLICT (content): Merge conflict in views/index.html.haml
+
+  %p
+    Visit each file that has a
+    %code CONFLICT
+    and fix them, each file will contain something like this:
+  =code 'no-code' do
+    :plain
+      <<<<<<< HEAD
+        .container
+          .row
+            .col-md-12
+              %h2 Your version
+      =======
+        .container-fluid
+          .row-fluid
+            .span12
+              %h2 Version being pulled
+      >>>>>>>
+  %p
+    Everything between
+    %code <<<<<<< HEAD
+    and
+    %code =======
+    is the code you are attempting to push. Everything between
+    %code =======
+    and
+    %code >>>>>>>
+    is the code on the master branch. You must decide which code is the most recent working code and delete the other or merge the two together, you must also remember to delete the
+    %code <<<<<<< HEAD, =======
+    and
+    %code >>>>>>>
+    \.
+  %p Return to terminal after all conficts are fixed and type
+  =code 'no-code' do
+    :plain
+      git commit -a
+
+  %p Remember if you have any commited code waiting to be pushed to push this now also.
+
+  %h3 Databases
+  %p TODO - explaination of rake db:migrate
+  =code 'no-code' do
+    :plain
+      rake db:migrate
+
+  %p
+    You can fetch a remote database by doing a ym db:fetch. You may be asked to specify an enviromment, for this you can do
+    %code -e staging
+    or
+    %code -e production
+
+  =code 'no-code' do
+    :plain
+      ym db:fetch -e production
+
+  %h3 Deploying
+  %p To deploy a project to production or staging make sure you have pulled the latest changes and your branch is up to date.
+
+  %p Recompile assets:
+  =code 'no-code' do
+    :plain
+      rake assets:recompile
+
+  %p Push recompiled assets:
+  =code 'no-code' do
+    :plain
+      git push origin *branch-name*
+
+  %p Deploy, only use -m if there is migrations:
+  =code 'no-code' do
+    :plain
+      ey deploy -m
+
   %h3 Pushing to Git
   %p Try to push to git as often as you can in order to avoid conflicts with the rest of the team. Always stage and commit your changes in GitX, then pull before pushing in terminal.
   %p Try to write helpful and concise commit messages and always use the present tense, for example; "Add jQuery to application.coffee" instead of "Added jQuery to application.coffee"
@@ -25,7 +118,7 @@
       
       ## Shows all the files & folders in the current directory in a list and shows permissions for each
       ls -l
-        
+
   =code 'no-code' do
     :plain
       ## change directory
@@ -36,7 +129,7 @@
       
       ## Returns you to your home directory
       cd
-      
+
   =code 'no-code' do
     :plain
       ## Copy a file
@@ -50,13 +143,13 @@
   =code 'no-code' do
     :plain
       git clone git@gitlab.yoomee.com:yoomee/code-standards.git
-  
+
   %h3 How to override gems
   %p To override anything within a gem:
   =code 'no-code' do
     :plain
       bundle open *gem_name*
-  
+
   %ul
     %li Find the file you wish to edit, and re-create this file in your local app/views (in the  same folder it is located in in the gem)
     %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
@@ -79,16 +172,16 @@
   =code 'no-code' do
     :plain
       git clone git@gitlab.yoomee.com:yoomee/ym_core.git
-  
+
   %ul
     %li Go to a project to test the gem changes in and open the 'gemfile' located in the root folder.
     %li Find the gem you want to edit and uncomment the path (remove the hash after the version number), this tells the project to use the local version of the gem.
   =code do
     :plain
       gem 'ym_core',  '~> 1.1.9' #, :path => "~/Rails/Gems/ym_core"
-      
+
       ## Should now look like this
-      
+
       gem 'ym_core',  '~> 1.1.9', :path => "~/Rails/Gems/ym_core"
   %ul
     %li Open the gem file you just cloned locally and make your changes.
@@ -105,18 +198,18 @@
   =code 'no-code' do
     :plain
       ym gem:bump
-      
+
       ## Press enter when the old and new version numbers are shown
-      
+
   %ul
     %li Remember to revert the gemfile of the project you tested the gem in to reflect your changes:
-  
+
   =code do
     :plain
       gem 'ym_core',  '~> 1.1.9', :path => "~/Rails/Gems/ym_core"
-      
+
       ## Should now look like this, remember to update the gem version number
-      
+
       gem 'ym_core',  '~> 1.1.10' #, :path => "~/Rails/Gems/ym_core"
 
   %ul
@@ -141,4 +234,3 @@
           root :to => 'home#index'
 
         end
-
