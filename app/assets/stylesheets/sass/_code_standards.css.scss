@@ -1,5 +1,6 @@
 body{
 	color:#70797f;
+	word-break: break-word;
 }
 a {
 	color: #E2566D;
@@ -55,12 +56,6 @@ ul{
 		float: left;
 		clear: both;
 	}
-}
-
-.centralise{
-		float:none;
-		margin:0 auto;
-		display:block;
 }
 
 .main{
