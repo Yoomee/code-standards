@@ -1,12 +1,15 @@
 body{
 	color:#70797f;
-	word-break: break-word;
 }
 a {
 	color: #E2566D;
 	&:hover {
 		color: #CD4D66;
 	}
+}
+a[href^="http://"],
+a[href^="https://"] {
+  word-break: break-word;
 }
 ul{
 	  list-style-image: url(/assets/bullet.gif);
