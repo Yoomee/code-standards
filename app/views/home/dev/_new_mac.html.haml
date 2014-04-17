@@ -1,24 +1,23 @@
 #new-mac.cs-section
   %h2.page-header Setting up a new Mac
-  %p Links to tools you may want to install later
-  %ul
-    %li
-      %h3 
-        =link_to 'Sublime Text', 'http://www.sublimetext.com'
-      =code 'no-code' do
-        :plain
-          ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
-    %li
-      %h3 
-        =link_to 'Text Mate', 'http://macromates.com/'
-    %li
-      %h3 Oh my zsh
-      =code 'no-code' do
-        :plain
-          curl -L http://install.ohmyz.sh | sh
+  %p Links to tools you may want to install later:
+  %h3 Text editors
+  %h4
+    =link_to 'Sublime Text', 'http://www.sublimetext.com'
+  =code 'no-code' do
+    :plain
+      ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+  %h4
+    =link_to 'Text Mate', 'http://macromates.com/'
+  %h3 Bash enhancement
+  %h4
+    =link_to 'Oh my zsh', 'https://github.com/robbyrussell/oh-my-zsh'
+  =code 'no-code' do
+    :plain
+      curl -L http://install.ohmyz.sh | sh
 
-          For your bashrc or zshrc
-          export EYRC="./.eyrc"
+      For your bashrc or zshrc
+      export EYRC="./.eyrc"
 
   %h3 Install Xcode
   %p 

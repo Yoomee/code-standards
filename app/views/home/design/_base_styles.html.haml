@@ -1,12 +1,47 @@
 #base-styles.cs-section
   %h2.page-header Base styles
-  %ul
-    %li Naming partials?
-    %li typography
-    %li Images
-    %li forms
-    %li nav
-    %li buttons
-    %li alerts
-    %li labels
-    %li sticky footer?
+
+  %h3 Sticky Footer
+  %p
+    We use
+    =link_to('Ryan Faits sticky footer', 'http://ryanfait.com/sticky-footer/')
+    which we have modified slightly with SASS.
+  =code 'css' do
+    :plain
+      /* Set size of sticky footer in the variable: */
+      $footer-height: 80px;
+
+      .main-wrapper {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* the bottom margin is the negative value of the footer's height */
+        margin: 0 auto (-$footer-height);
+      }
+      .push {
+        clear: both;
+        height: $footer-height;
+      }
+      .footer-wrapper {
+      	clear: both;
+      	min-height: $footer-height;
+      	padding-bottom: 0px;
+      	background: #1c2021;
+      	padding: 15px 0px 0px;
+      }
+  %p A simplified version of the HAML needed for this (in the layours/application view) would be:
+
+  =code do
+    :plain
+      .main-wrapper
+        =render("layouts/header")
+        .wrapper
+          -if flash.present?
+            =yield_with_bootstrap(render_flash)
+          =yield_with_bootstrap(yield, :span_class => 'col-md-12')
+        .push
+      .footer-wrapper
+        =render("layouts/footer")
+  %p 
+    For more base styles, See our
+    =link_to 'styles page', '/standards-style'
