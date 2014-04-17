@@ -1,39 +1,41 @@
 #no-dev.cs-section
   %h2.page-header if !dev.present?
-  %ul
-    %li What is Git?
-    %li Bundler
-    
-  %h3 Thinking Sphinx
-  =code 'no-code' do
-    :plain
-      rake ts:start
 
-  =code 'no-code' do
-    :plain
-      rake ts:stop
+  %h3 What is Git?
+  %p
+    For an introduction to Git read
+    =link_to('Git Basics', 'http://git-scm.com/book/en/Getting-Started-Git-Basics')
+    from git-scm.com
 
+  %h3 How to clone a project
+  %p To clone a project, cd into your 'rails' folder and run this in terminal:
   =code 'no-code' do
     :plain
-      rake ts:rebuild
+      git clone git@gitlab.yoomee.com:yoomee/code-standards.git
 
   %h3 Git branches
   %p To create a new branch a switch to it
   =code 'no-code' do
     :plain
       git checkout -b *branch_name*
-  
+
   %p To switch to an existing branch
   =code 'no-code' do
     :plain
       git checkout *branch_name*
+
+  %h3 Pushing to Git
+  %p Try to push to git as often as you can in order to avoid conflicts with the rest of the team. Always stage and commit your changes in GitX, then pull before pushing in terminal.
+  %p Try to write helpful and concise commit messages and always use the present tense, for example; "Add jQuery to application.coffee" instead of "Added jQuery to application.coffee"
+  =code 'no-code' do
+    :plain
+      git push origin *branch_name*
 
   %h3 Git conflicts
   %p Git conflicts will appear like this in terminal:
   =code 'no-code' do
     :plain
       CONFLICT (content): Merge conflict in views/index.html.haml
-
   %p
     Visit each file that has a
     %code CONFLICT
@@ -69,11 +71,35 @@
   =code 'no-code' do
     :plain
       git commit -a
-
   %p Remember if you have any commited code waiting to be pushed to push this now also.
 
+  %h3 Bundler
+  %p
+    We use
+    =link_to('Bundler', 'http://bundler.io/')
+    to bundle gems. After you have pulled form git or bumped a gem, run:
+
+  =code 'no-code' do
+    :plain
+      bundle
+
+  %h3 Thinking Sphinx
+  =code 'no-code' do
+    :plain
+      rake ts:start
+
+  =code 'no-code' do
+    :plain
+      rake ts:stop
+
+  =code 'no-code' do
+    :plain
+      rake ts:rebuild
+
   %h3 Databases
-  %p TODO - explaination of rake db:migrate
+  %p 
+    %code rake db:migrate
+    checks which missing migrations still need to be applied to the database and runs them. 
   =code 'no-code' do
     :plain
       rake db:migrate
@@ -106,60 +132,10 @@
     :plain
       ey deploy -m
 
-  %h3 Pushing to Git
-  %p Try to push to git as often as you can in order to avoid conflicts with the rest of the team. Always stage and commit your changes in GitX, then pull before pushing in terminal.
-  %p Try to write helpful and concise commit messages and always use the present tense, for example; "Add jQuery to application.coffee" instead of "Added jQuery to application.coffee"
-
-  %h3 UNIX Commands
-  =code 'no-code' do
-    :plain
-      ## Shows all the files & folders in the current directory
-      ls
-      
-      ## Shows all the files & folders in the current directory in a list and shows permissions for each
-      ls -l
-
-  =code 'no-code' do
-    :plain
-      ## change directory
-      cd *directory-name*
-
-      ## Brings you up one directory level
-      cd ..
-      
-      ## Returns you to your home directory
-      cd
-
-  =code 'no-code' do
-    :plain
-      ## Copy a file
-      cp *filename*
-
-      ## Move a file or change it's name
-      mv *filename* *new-filename*
-
-  %h3 How to clone a project
-  %p To clone a project, cd into your 'rails' folder and run this in terminal:
-  =code 'no-code' do
-    :plain
-      git clone git@gitlab.yoomee.com:yoomee/code-standards.git
-
   %h3 How to override gems
   %p To override anything within a gem:
   =code 'no-code' do
     :plain
-      bundle open *gem_name*
-
-  %ul
-    %li Find the file you wish to edit, and re-create this file in your local app/views (in the  same folder it is located in in the gem)
-    %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
-    %li You can edit and save changes in the file you just created. Your app will use this file rather than the file from the gem.
-
-  %h3 How to edit gems
-  %p To override anything within a gem:
-  =code 'no-code' do
-    :plain
-      ## Replace the correct link from gitlab
       bundle open *gem_name*
 
   %ul
@@ -220,6 +196,35 @@
     %li
       If you are bumping a gem with no version number set, you need to run
       %code bundle update *(gem name)*
+
+  %h3 UNIX Commands
+  =code 'no-code' do
+    :plain
+      ## Shows all the files & folders in the current directory
+      ls
+
+      ## Shows all the files & folders in the current directory in a list and shows permissions for each
+      ls -l
+
+  =code 'no-code' do
+    :plain
+      ## change directory
+      cd *directory-name*
+
+      ## Brings you up one directory level
+      cd ..
+
+      ## Returns you to your home directory
+      cd
+
+  =code 'no-code' do
+    :plain
+      ## Copy a file
+      cp *filename*
+
+      ## Move a file or change it's name
+      mv *filename* *new-filename*
+
   %h3 How to add a new route a file
   %p 
     When you need to add a new page to the solution, add your .html.haml file in the /views/home directory 
