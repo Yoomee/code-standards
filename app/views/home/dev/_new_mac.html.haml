@@ -24,7 +24,10 @@
     This is needed to install git, gcc and lots of other necessary libraries etc. Install from the 
     =link_to 'App Store', 'https://itunes.apple.com/gb/app/xcode/id497799835?mt=12'
   %p Once installed open XCode, go to Preferences > Downloads and install Command Line Tools.
-  %p (Mavericks use  $ xcode-select --install)
+  =code 'no-code' do
+    :plain
+      xcode-select --install
+
   %h3 Install Homebrew
   =code 'no-code' do
     :plain
