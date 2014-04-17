@@ -19,7 +19,15 @@ module CodeHelper
       raw = args.first
       language = args.second
     end
-    out = raw.split(/\n/).map{|l| eval(l.strip.sub(/^=/,''))}.join(' ')
+    language ||= 'ruby'
+    out = case language
+    when 'ruby'
+      raw.split(/\n/).map{|l| eval(l.strip.sub(/^=/,''))}.join(' ')
+    when 'haml'
+      Haml::Engine.new(raw).render
+    else
+      raw
+    end
     "#{out} #{code(raw, language)}".html_safe
   end
 end
