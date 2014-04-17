@@ -7,13 +7,13 @@
   .cs-contents.col-md-3
     .col-md-12.nav-main{"data-offset-bottom" => "100", "data-offset-top" => "280", "data-spy" => "affix"}
       %h2 Design
-      %ul
+      %ul.nav
         %li=link_to "Code standards", "#code-standards"
         %li=link_to "Base styles", "#base-styles"
         %li=link_to "Responsive", "#responsive"         
         %li=link_to "Browser support", "#browser-support"
         %li=link_to "CSS helper classes", "#css-helper-classes" 
-      %ul.mb-6
+      %ul.mb-6.nav
         %li=link_to "Animations", "#animations"
         %li=link_to "Javascript", "#javascript"
         %li=link_to "Variables", "#variables"
@@ -21,10 +21,10 @@
         %li=link_to "Assets", "#assets"
         %li=link_to "Wish list", "#wish-list"
       %h2 Dev/back end
-      %ul
+      %ul.nav
         %li=link_to "Ruby stuff", "#ruby"
         %li=link_to "if !dev.present?", "#no-dev"
-        %li=link_to "Setting up a new Mac", "#new-mac"    
+        %li=link_to "Setting up a new Mac", "#new-mac"
 
   .col-md-8.main
     =render('home/design/code_standards')

@@ -1,2 +1,234 @@
 #buttons.cs-section
   %h2.page-header Buttons
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Button
+        %th Large Button
+        %th Small Button
+        %th Disabled Button
+        %th Button with Icon
+        %th Split Button
+    %tbody
+      %tr
+        %td
+          %button.btn.btn-default{type: "button"} Default
+        %td
+          %button.btn.btn-default.btn-lg{href: "#"} Default
+        %td
+          %button.btn.btn-default.btn-sm{href: "#"} Default
+        %td
+          %button.btn.btn-default.disabled{href: "#"} Default
+        %td
+          %button.btn.btn-default{href: "#"}
+            %i.fa.fa-cog
+            Default
+        %td
+          .btn-group
+            %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Default
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+      %tr
+        %td
+          %a.btn.btn-primary{href: "#"} Primary
+        %td
+          %a.btn.btn-primary.btn-lg{href: "#"} Primary
+        %td
+          %a.btn.btn-primary.btn-sm{href: "#"} Primary
+        %td
+          %a.btn.btn-primary.disabled{href: "#"} Primary
+        %td
+          %a.btn.btn-primary{href: "#"}
+            %i.fa.fa-shopping-cart
+            Primary
+        %td
+          .btn-group
+            %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Primary
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+      %tr
+        %td
+          %a.btn.btn-info{href: "#"} Info
+        %td
+          %a.btn.btn-info.btn-lg{href: "#"} Info
+        %td
+          %a.btn.btn-info.btn-sm{href: "#"} Info
+        %td
+          %a.btn.btn-info.disabled{href: "#"} Info
+        %td
+          %a.btn.btn-info{href: "#"}
+            %i.fa.fa-exclamation-circle
+            Info
+        %td
+          .btn-group
+            %button.btn.btn-info.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Info
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+      %tr
+        %td
+          %a.btn.btn-success{href: "#"} Success
+        %td
+          %a.btn.btn-success.btn-lg{href: "#"} Success
+        %td
+          %a.btn.btn-success.btn-sm{href: "#"} Success
+        %td
+          %a.btn.btn-success.disabled{href: "#"} Success
+        %td
+          %a.btn.btn-success{href: "#"}
+            %i.fa.fa-check
+            Success
+        %td
+          .btn-group
+            %button.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Success
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+      %tr
+        %td
+          %a.btn.btn-warning{href: "#"} Warning
+        %td
+          %a.btn.btn-warning.btn-lg{href: "#"} Warning
+        %td
+          %a.btn.btn-warning.btn-sm{href: "#"} Warning
+        %td
+          %a.btn.btn-warning.disabled{href: "#"} Warning
+        %td
+          %a.btn.btn-warning{href: "#"}
+            %i.fa.fa-exclamation-triangle
+            Warning
+        %td
+          .btn-group
+            %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Warning
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+      %tr
+        %td
+          %a.btn.btn-danger{href: "#"} Danger
+        %td
+          %a.btn.btn-danger.btn-lg{href: "#"} Danger
+        %td
+          %a.btn.btn-danger.btn-sm{href: "#"} Danger
+        %td
+          %a.btn.btn-danger.disabled{href: "#"} Danger
+        %td
+          %a.btn.btn-danger{href: "#"}
+            %i.fa.fa-times-circle 
+            Danger
+        %td
+          .btn-group
+            %button.btn.btn-danger.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Danger
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
+
+  %h3 HAML code for buttons
+  =code do
+    :plain
+      ## HAML for basic buttons
+      %button.btn.btn-default{type: "button"} Default
+
+
+  =code do
+    :plain
+      ## HAML for large buttons
+      %button.btn.btn-default.btn-lg{href: "#"} Default
+
+  =code do
+    :plain
+      ## HAML for small buttons
+      %button.btn.btn-default.btn-sm{href: "#"} Default
+  
+  =code do
+    :plain
+      ## HAML for disabled buttons
+      %button.btn.btn-default.disabled{href: "#"} Default
+
+  =code do
+    :plain
+      ## HAML for buttons with icons
+      %button.btn.btn-default{href: "#"}
+        %i.fa.fa-cog
+        Default
+
+  =code do
+    :plain
+      ## HAML for button dropdown styles        
+      .btn-group
+            %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Default
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li
+                %a{href: "#"} Separated link
+          / /btn-group
