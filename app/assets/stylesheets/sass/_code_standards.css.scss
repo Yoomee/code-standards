@@ -34,21 +34,26 @@ ul{
 		}
 		li{
       display: block;
-      height: 22px;
-      line-height: 22px;
-      padding: 8px;
-			a{
-        margin-left:-20px;
-        border-left: 5px solid #FFFFFF;
-        clear: both;
-        display: block;
-        float: left;
-        padding: 2px 7px;
-				&:hover{
-					border-left:5px solid #E2566D;
-					text-decoration: none;
-				}
+      float:left;
+      margin-left:-20px;
+      border-left: 5px solid #FFFFFF;
+      clear: both;
+      display: block;
+      float: left;
+      width: 100%;
+      &.active{
+        border-left:5px solid #E2566D;
+        text-decoration: none;
+      }
+			&:hover{
+				border-left:5px solid #E2566D;
+				text-decoration: none;
+        background: #EEEEEE;
 			}
+      a{
+        outline: 0;
+        padding:7px 15px;
+      }
 		}
 	}
 	h2{
@@ -60,9 +65,18 @@ ul{
     float: left;
     list-style: none;
     padding-left: 0px;
+    width:254px;
 	}
 }
 
+.layout-heading {
+  background: #f5f5f5;
+  margin: 30px 0px 60px;
+  padding: 30px 0px;
+  h1 {
+    margin: 0;
+  }
+}
 .main{
 	@include media-query (sm-max){
 		padding-left: 180px;

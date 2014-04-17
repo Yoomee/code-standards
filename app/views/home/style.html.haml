@@ -7,18 +7,18 @@
 .container
   .cs-contents.col-md-3
     .col-md-12.nav-main{"data-offset-bottom" => "100", "data-offset-top" => "280", "data-spy" => "affix"}
-      %h2 Design
-      %ul
+      %h2 Contents
+      %ul.nav
         %li=link_to "Typography", "#typography"
-        %li=link_to "Navbars", "#navbars"
-        %li=link_to "Buttons", "#buttons"         
+        %li=link_to "Buttons", "#buttons"      
+        %li=link_to "Navbars", "#navbars"   
         %li=link_to "Forms", "#forms"
         %li=link_to "Miscellaneous", "#misc" 
 
   .col-md-8.main
     =render('home/bootstrap/typography')
-    =render('home/bootstrap/navbars')
     =render('home/bootstrap/buttons')
+    =render('home/bootstrap/navbars')
     =render('home/bootstrap/forms')
     =render('home/bootstrap/miscellaneous')    
 
