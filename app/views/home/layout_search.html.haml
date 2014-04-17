@@ -1,8 +1,21 @@
 .container
+.layout-heading
+  .container
+    .row
+      .col-lg-12
+        %h1 Search
+.container
   .row
-    .col-sm-4
-      %h3 Search
+    .col-sm-3
+      %h3.mt-0 Search
       %input
       =link_to('search', '#', :class => 'btn btn-primary')
-    .col-sm-8
-      
+    .col-sm-9
+      -8.times do
+        .media
+          %a.pull-left{href: "#"}
+            =image_placeholder('64x#', :class => 'media-object')
+          .media-body
+            %h4.media-heading Search result heading
+            %p This is a search result description.
+          
