@@ -143,6 +143,19 @@
     %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
     %li You can edit and save changes in the file you just created. Your app will use this file rather than the file from the gem.
 
+  %h3 How to override stuff in gems
+  %p To override anything within a gem:
+  =code 'no-code' do
+    :plain
+      ## Replace the correct link from gitlab
+      bundle open *gem_name*
+
+  %ul
+    %li Find the file you wish to edit, and re-create this file in your local app/views (in the  same folder it is located in in the gem)
+    %li Copy the code from the file in the gem, into the file you have just created. You can close the gem files now.
+    %li You can edit and save changes in the file you just created. Your app will use this file rather than the file from the gem.
+
+
   %h3 How to update gems
   %p To update a gem for all projects, cd into your gems folder and run:
   =code 'no-code' do
@@ -197,6 +210,7 @@
       If you are bumping a gem with no version number set, you need to run
       %code bundle update *(gem name)*
 
+
   %h3 UNIX Commands
   =code 'no-code' do
     :plain
@@ -225,10 +239,12 @@
       ## Move a file or change it's name
       mv *filename* *new-filename*
 
-  %h3 How to add a new route a file
+  %h3 Adding new pages to a project
   %p 
-    When you need to add a new page to the solution, add your .html.haml file in the /views/home directory 
-    and add it to routes.rb which is located in the config folder of the project
+    When you need to add a new page to the solution, add your .html.haml file in the /views/home directory. 
+    You will then need to add the new page to the routes.rb file which is located in the config folder of the project.
+  %p
+    To add a new page you need to use 'get', reference the path segment you want, and then associate it with the location in the folder structure, as follows with the line: get "standards-style" => "home#style"
   =code do
     :plain
         CodeStandards::Application.routes.draw do

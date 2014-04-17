@@ -1,5 +1,66 @@
 #variables.cs-section
   %h2.page-header Variables
+  %p We use an edited version of the bootstrap-sass variables file in local projects.
+  This file is a partial called _variables.css.scss. You can edit and add custom variables for the project underneath the base bootstrap variables.
+
+  There are other bootstrap variables that were stripped out of this version, this includes variables for:
+  .row
+    .col-md-6
+      %ul
+        %li Iconography
+        %li Tables
+        %li Dropdowns
+        %li Z-index
+        %li Media queries breakpoints
+        %li some elements of the grid system
+        %li Container sizes
+        %li Pagination
+        %li Pager
+    .col-md-6
+      %ul
+        %li Tooltips
+        %li Popovers
+        %li Modals
+        %li Panels
+        %li Thumbnails
+        %li Breadcrumbs
+        %li Close
+        %li Code
+  %p If you need to reference bootstrap-sass to add variable sets to the project version, open the terminal cd to your project directory and enter bundle open bootstrap-sass, as below:
+  =code 'no-code' do
+    :plain
+      *directory name* > bundle open bootstrap-sass
+
+
+  Some of the variable names below are common types of variables you might need to change in a project
+  Additional custom variables underneath.
+  
+  =code do
+    :plain
+
+      /* Typography */ 
+      
+      $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+      $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+
+      /* Typography - custom  _____________________________________*/
+
+      $league: "League Gothic Regular",  Arial, Helvetica, Verdana, sans-serif;
+      $helvetica: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+
+
+      /* Buttons */ 
+      $btn-default-color:              #333 !default;
+      $btn-default-bg:                 #fff !default;
+      $btn-default-border:             #ccc !default;
+
+      /* Buttons - custom  _____________________________________*/
+      
+      $btn-default-shadow:             0px 0px 3px #ccc !default;
+
+
+
   %h3 Yoomee base brand colours
   %table.table.table-striped.t-variable
     %thead
