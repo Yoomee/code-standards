@@ -1,26 +1,33 @@
 #layout-examples.cs-section
   %h2.page-header Layout examples
   %p Here are a few basic layouts, using styles found in ym_core
-  .row
-    .col-md-4
-      .well
-        =link_to "Basic page", "/layout-basic", :class => ""
-    .col-md-4
-      .well
-        =link_to "Page list", "/layout-list", :class => ""
-    .col-md-4
-      .well
-        =link_to "Tiles", "/layout-tiles", :class => ""
-    .col-md-4
-      .well
-        =link_to "Blog post", "/layout-blog-post", :class => ""      
-    .col-md-4
-      .well
-        =link_to "Search page", "/layout-search", :class => ""       
-    .col-md-4
-      .well
-        =link_to "Home page with carousel", "layout-carousel", :class => ""
-    .col-md-4
-      .well
-        =link_to "One page love", "/layout-one-page", :class => ""                     
+  .row.mt-2
+    .col-md-3
+      =link_to "/layout-basic", :class => "layout-example" do
+        =image_tag ("layout-basic.png")
+        Basic page
+    .col-md-3
+      =link_to "/layout-list", :class => "layout-example" do
+        =image_tag ("layout-list.png")
+        List
+    .col-md-3
+      =link_to "/layout-tiles", :class => "layout-example" do
+        =image_tag ("layout-tiles.png")
+        Tiles
+    .col-md-3
+      =link_to "/layout-blog-post", :class => "layout-example" do
+        =image_tag ("layout-blog-post.png")
+        Blog post
+    .col-md-3
+      =link_to "/layout-search", :class => "layout-example" do
+        =image_tag ("layout-search.png")
+        Search       
+    .col-md-3
+      =link_to "layout-carousel", :class => "layout-example" do
+        =image_tag ("layout-carousel.png")
+        Carousel
+    .col-md-3
+      =link_to "/layout-one-page", :class => "layout-example" do
+        =image_tag ("layout-one-page.png")
+        One page
 
