@@ -11,7 +11,7 @@
 #= require prism
 #= require smooth-scroll
 #= require jquery.scrollUp.min
-#= require sticky-header
+#= require one-page
 
 $(document).ready ->
   

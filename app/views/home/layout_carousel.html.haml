@@ -1,7 +1,96 @@
 .container
+.layout-heading.mb-0
+  .container
+    .row
+      .col-lg-12
+        %h1 Carousel
+#carousel-ym.carousel.slide{"data-ride" => "carousel", "data-interval" => "10000"}
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-ym"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-ym"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-ym"}
+  .carousel-inner
+    .item.item-carousel.item-1.active
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            .item-inner
+              .item-img
+                =image_tag('image-icon.png')
+              .caption
+                %h1.m-0 This is heading caption text on slide 1
+                %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+    .item.item-carousel.item-2
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            .item-inner
+              .item-img
+                =image_tag('camera-icon.png')
+              .caption
+                %h1.m-0 This is caption text on slide 2
+                %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+    .item.item-carousel.item-3
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            .item-inner
+              .item-img
+                =image_tag('image-icon.png')
+              .caption
+                %h1.m-0 This is caption text on slide 3
+                %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+  %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-ym"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#carousel-ym"}
+    %span.glyphicon.glyphicon-chevron-right
+
+.container
   .row
-    .col-sm-4
-      %h3 Carousel
-      %input
-    .col-sm-8
-      
+    .col-md-8.pt-8.pb-10
+      %h3 Use the HAML code below to insert a bootstrap carousel
+      %p 
+        Images are background images on the 
+        %code .item-img tag.
+      =code 'haml' do
+        :plain       
+          #carousel-ym.carousel.slide{"data-ride" => "carousel", "data-interval" => "10000"}
+            %ol.carousel-indicators
+              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-ym"}
+              %li{"data-slide-to" => "1", "data-target" => "#carousel-ym"}
+              %li{"data-slide-to" => "2", "data-target" => "#carousel-ym"}
+            .carousel-inner
+              .item.item-carousel.item-1.active
+                .container
+                  .row
+                    .col-md-8.col-md-offset-2
+                      .item-inner
+                        .item-img
+                          =image_tag('add your image here')
+                        .caption
+                          %h1.m-0 This is heading caption text on slide 1
+                          %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+              .item.item-carousel.item-2
+                .container
+                  .row
+                    .col-md-8.col-md-offset-2
+                      .item-inner
+                        .item-img
+                          =image_tag('add your image here')
+                        .caption
+                          %h1.m-0 This is caption text on slide 2
+                          %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+              .item.item-carousel.item-3
+                .container
+                  .row
+                    .col-md-8.col-md-offset-2
+                      .item-inner
+                        .item-img
+                          =image_tag('add your image here')
+                        .caption
+                          %h1.m-0 This is caption text on slide 3
+                          %p.col-md-8.col-md-offset-2 At times there are descriptive captions that are paired with a heading to give more depth to a slide, or provide a call to action.
+            %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-ym"}
+              %span.glyphicon.glyphicon-chevron-left
+            %a.right.carousel-control{"data-slide" => "next", href: "#carousel-ym"}
+              %span.glyphicon.glyphicon-chevron-right

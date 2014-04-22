@@ -1,0 +1,114 @@
+
+/* Blog post stuff  */
+
+.blog-hero-holder{
+  padding-top:600px;
+  .blog-hero-text {
+    bottom: 60px;
+    position: absolute;
+    width: 91%;
+  }
+} 
+
+#blog-post{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  img{
+    margin:60px auto;
+  }
+  a{
+    border-bottom: 1px dashed;
+    &:hover{
+      text-decoration:none;
+      color:#333;
+    }
+  }
+}
+.strip-hero{
+    background: url('http://placehold.it/1400x600') no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    width:100%;
+    margin-bottom: 30px;
+}
+
+/* Tiles style */
+
+.tile-link{
+  width:100%;
+  text-decoration: none;
+  color:#70797F;
+  &:hover {
+    color:#5C6368;
+    text-decoration: none;
+  }
+  &:hover .tile-block.color{
+    background:#f2f2f2;
+  }
+  .tile-block.color{
+    background-color: #f6f6f6;
+  }
+  img{
+    width:100%;
+  }
+}
+
+
+/*   One page  */
+
+#one-page{
+  section{
+    position:relative;
+    width:100%;
+    color:#fff;
+    font-size: 2em;
+    font-weight:bold;
+    text-align:center;
+  }
+  .hero{
+    background:$ym-red;
+    img{
+      margin-top:30%;
+    }
+    span{
+      display: block;
+    }
+  }
+  .second{
+    background: #E59CA7;
+    height:600px;
+  }
+}
+
+
+
+/*   Carousel  */
+
+.item{
+  height:500px;
+}
+.item-1{
+  background:url('/assets/carousel-bg1.png') no-repeat;
+}
+
+.item-2{
+  background:url('/assets/carousel-bg2.png') no-repeat;
+}
+
+.item-3{
+  background:url('/assets/carousel-bg3.png') no-repeat;
+}
+.carousel-control.left,
+.carousel-control.right{
+  background: transparent;
+}
+.item-img{
+  text-align: center;
+  padding:60px 0 10px;
+}
+.caption{
+  text-align: center;
+  color:#fff;
+}
