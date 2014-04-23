@@ -46,6 +46,15 @@
     %span.glyphicon.glyphicon-chevron-right
 
 .container
+  .row.pt-5
+    -3.times do
+      .col-md-4
+        =image_placeholder('400x250#')
+        %h3 This is a headline
+        %p This is a group of text
+
+
+.container
   .row
     .col-md-8.pt-8.pb-10
       %h3 Use the HAML code below to insert a bootstrap carousel

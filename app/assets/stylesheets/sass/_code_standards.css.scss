@@ -17,7 +17,7 @@ ul{
 
 .cs-logo {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 30px auto;
   max-width: 200px;
 }
 
@@ -70,9 +70,13 @@ ul{
 }
 
 .layout-heading {
-  background: #f5f5f5;
-  margin: 30px 0px 60px;
-  padding: 30px 0px;
+  background: transparent;
+  margin: 40px 0 60px;
+  padding: 30px 100px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
   h1 {
     margin: 0;
   }

@@ -63,22 +63,20 @@
     position:relative;
     width:100%;
     color:#fff;
-    font-size: 2em;
-    font-weight:bold;
     text-align:center;
-  }
-  .hero{
-    background:$ym-red;
-    img{
-      margin-top:30%;
+    p{
+      font-size: 1.3em;
     }
+  }
+  .section1{
+    background:$ym-red;
     span{
       display: block;
     }
   }
-  .second{
+  .section2{
     background: #E59CA7;
-    height:600px;
+    height:900px;
   }
 }
 

@@ -1,6 +1,6 @@
 $(document).ready(function(){
-      $(".hero").height($(window).height());
+      $(".section1").height($(window).height());
           $(window).resize(function(){
-              $(".hero").height($(window).height());
+              $(".section2").height($(window).height());
       });
   });

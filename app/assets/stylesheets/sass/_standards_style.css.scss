@@ -10,3 +10,10 @@ address{
     display:block;
   }
 }
+
+/* Fixes for Bootstrap components affected by Code standards */
+
+.cs-section .navbar-nav li{
+  clear: none;
+  margin: 0;
+}
