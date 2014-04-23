@@ -14,10 +14,10 @@
 
   .row.m-0
     %section.section2
-      .col-md-4.col-md-offset-4.pt-10
+      .col-md-6.col-md-offset-3.pt-10
         %h1 Hello again! 
-        %p This is the second section
-      .col-md-4.col-md-offset-4
+        %p Add the following jquery to your project to set to full viewport - this is not included in ym_assets
+      .col-md-6.col-md-offset-3
         %h3 The JQuery 
         =code 'haml' do
           :plain
@@ -29,20 +29,29 @@
                         $(".section1").height($(window).height());
                 });
             });
-      .col-md-4.col-md-offset-4
-        %h3 The HAML 
-        =code 'haml' do
+      .col-md-6.col-md-offset-3
+        %h3 The SCSS 
+        =code 'scss' do
           :plain
-          .container
-          #one-page
-            .row.m-0
-              %section.section1
-                .col-md-4.col-md-offset-4.pt-10
-                  %h1 Hello.
-                  %p This is the first section of the one page layout
+          #one-page{
+            section{
+              position:relative;
+              width:100%;
+              color:#fff;
+              text-align:center;
+              p{
+                font-size: 1.3em;
+              }
+            }
+            .section1{
+              background:$ym-red;
+              span{
+                display: block;
+              }
+            }
+            .section2{
+              background: #E59CA7;
+              height:1200px;
+            }
+          }
 
-            .row.m-0
-              %section.section2
-                .col-md-4.col-md-offset-4.pt-10
-                  %h1 Hello again! 
-                  %p This is the second section

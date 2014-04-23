@@ -9,7 +9,6 @@
     width: 91%;
   }
 } 
-
 #blog-post{
   font-size: 1.3em;
   line-height: 1.5em;
@@ -25,16 +24,10 @@
   }
 }
 .strip-hero{
-    background: url('http://placehold.it/1400x600') no-repeat;
-    background-position: center top;
-    background-size: cover;
-    height: 600px;
-    position: relative;
-    width:100%;
-    margin-bottom: 30px;
+    background: url('http://placehold.it/1400x600') no-repeat center top;
 }
 
-/* Tiles style */
+/* Custom tiles style */
 
 .tile-link{
   width:100%;
@@ -56,7 +49,7 @@
 }
 
 
-/*   One page  */
+/*   Custom cne page style  */
 
 #one-page{
   section{
@@ -76,13 +69,13 @@
   }
   .section2{
     background: #E59CA7;
-    height:900px;
+    height:1200px;
   }
 }
 
 
 
-/*   Carousel  */
+/*   Custom carousel style */
 
 .item{
   height:500px;
@@ -90,11 +83,9 @@
 .item-1{
   background:url('/assets/carousel-bg1.png') no-repeat;
 }
-
 .item-2{
   background:url('/assets/carousel-bg2.png') no-repeat;
 }
-
 .item-3{
   background:url('/assets/carousel-bg3.png') no-repeat;
 }
@@ -109,4 +100,12 @@
 .caption{
   text-align: center;
   color:#fff;
+}
+
+/*   Lists  */
+
+#ym_list{
+  ul{
+    list-style: none;
+  }
 }
