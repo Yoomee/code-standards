@@ -1,20 +1,22 @@
 .container
-  .row
-    .col-md-12
-      %h1.center Yoomee code standards
+.layout-heading.mb-0
+  .container
+    .row
+      .col-lg-12
+        %h1 Yoomee code standards
 
 .container
-  .cs-contents.col-md-3
-    .col-md-12.nav-main{"data-offset-bottom" => "100", "data-offset-top" => "280", "data-spy" => "affix"}
+  .cs-contents.col-md-3.col-sm-4
+    .nav-main{"data-offset-bottom" => "100", "data-offset-top" => "280", "data-spy" => "affix"}
       %h2 Design
-      %ul.nav
+      %ul.nav.col-md-12.col-sm-12
         %li=link_to "Code standards", "#code-standards"
         %li=link_to "Base styles", "#base-styles"
         %li=link_to "Responsive", "#responsive"         
         %li=link_to "Browser support", "#browser-support"
         %li=link_to "CSS helper classes", "#css-helper-classes" 
         %li=link_to "Layout examples", "#layout-examples"
-      %ul.mb-6.nav
+      %ul.mb-6.nav.col-md-12.col-sm-12
         %li=link_to "Animations", "#animations"
         %li=link_to "Javascript", "#javascript"
         %li=link_to "Variables", "#variables"
@@ -23,7 +25,7 @@
         %li=link_to "Wish list", "#wish-list"
 
       %h2 Dev/back end
-      %ul.nav
+      %ul.nav.col-md-12.col-sm-12
         %li=link_to "Ruby stuff", "#ruby"
         %li=link_to "if !dev.present?", "#no-dev"
         %li=link_to "Setting up a new Mac", "#new-mac"

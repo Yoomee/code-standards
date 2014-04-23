@@ -1,14 +1,16 @@
 .container
-  .row
-    .col-md-12
-      %h1.center Yoomee bootstrap patterns
+.layout-heading.mb-0
+  .container
+    .row
+      .col-lg-12
+        %h1 Yoomee bootstrap patterns
 
 
 .container
-  .cs-contents.col-md-3
+  .cs-contents.col-md-3.col-sm-4
     .col-md-12.nav-main{"data-offset-bottom" => "100", "data-offset-top" => "280", "data-spy" => "affix"}
       %h2 Contents
-      %ul.nav
+      %ul.nav.col-sm-12
         %li=link_to "Typography", "#typography"
         %li=link_to "Buttons", "#buttons"      
         %li=link_to "Navbars", "#navbars"   

@@ -15,6 +15,11 @@ ul{
   list-style-image: url(/assets/bullet.gif);
 }
 
+#layouts{
+  box-shadow: 0 0 10px #ccc;
+  background:#f9f9f9;
+}
+
 .cs-logo {
   display: block;
   margin: 30px;
@@ -68,23 +73,25 @@ ul{
     float: left;
     list-style: none;
     padding-left: 0px;
-    width:254px;
 	}
 }
 
 .layout-heading {
   background: transparent;
-  margin: 40px 0 60px;
+  margin: 50px 0 60px;
   padding: 30px 100px;
   position: absolute;
   right: 0;
   text-align: right;
   top: 0;
   @include media-query (xs-max){
-    padding:30px 50px;
+    padding:20px 50px;
   }
   h1 {
     @include media-query (xs-max){
+      font-size: 1.8em;
+    }
+    @include media-query (sm-max){
       font-size: 1.8em;
     }
     margin: 0;
@@ -92,10 +99,10 @@ ul{
 }
 .main{
 	@include media-query (sm-max){
-		padding-left: 180px;
+		margin-left: 180px;
 	}
 	@include media-query (xs-max){
-		padding: 0 20px;
+		margin: 0 20px;
 	}
 }
 
