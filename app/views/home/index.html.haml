@@ -1,9 +1,6 @@
 .container
 .layout-heading.mb-0
-  .container
-    .row
-      .col-lg-12
-        %h1 Yoomee code standards
+  %h1 Yoomee code standards
 
 .container
   .cs-contents.col-md-3.col-sm-4
@@ -24,12 +21,14 @@
         %li=link_to "Assets", "#assets"
         %li=link_to "Wish list", "#wish-list"
 
+
       %h2 Dev/back end
       %ul.nav.col-md-12.col-sm-12
         %li=link_to "Ruby stuff", "#ruby"
         %li=link_to "if !dev.present?", "#no-dev"
         %li=link_to "Setting up a new Mac", "#new-mac"
 
+    
   .col-md-8.main
     =render('home/design/code_standards')
     =render('home/design/base_styles')
